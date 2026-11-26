@@ -1,0 +1,17 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    # Missing awaits on fire-and-forget persistence calls are intentional here.
+    unawaited_futures: ignore
+  exclude:
+    - build/**
+    - "**/*.g.dart"
+
+linter:
+  rules:
+    - prefer_final_locals
+    - prefer_single_quotes
+    - avoid_print
+    - always_declare_return_types
+    - unnecessary_parenthesis

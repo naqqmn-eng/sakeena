@@ -1,0 +1,58 @@
+name: sakeena
+description: >-
+  سكينة — تطبيق أذكار وعداد تسبيح هادئ يعمل بالكامل دون اتصال بالإنترنت.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State management: lightweight, no code generation, works on every tier.
+  provider: ^6.1.2
+
+  # Local persistence for counter, settings and custom adhkar.
+  shared_preferences: ^2.3.5
+
+  # Opening Telegram (app-first, web fallback).
+  url_launcher: ^6.3.1
+
+  # Native Android sharesheet.
+  share_plus: ^10.1.4
+
+  # Keep the screen awake while the counter is in use.
+  wakelock_plus: ^1.2.10
+
+  # Real application version shown on the About screen.
+  package_info_plus: ^8.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # fonts:
+  #   - family: Amiri
+  #     fonts:
+  #       - asset: assets/fonts/Amiri-Regular.ttf
+
+# Regenerate launcher icons with:
+#   dart run flutter_launcher_icons
+# (add `flutter_launcher_icons: ^0.14.3` to dev_dependencies first)
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: 'assets/icon/icon.png'
+  adaptive_icon_background: '#6F7C4E'
+  adaptive_icon_foreground: 'assets/icon/icon_foreground.png'
+  min_sdk_android: 24
